@@ -1,6 +1,7 @@
 const gridContainer = document.querySelector("#gridContainer");
 const colors = ["blue", "red", "green"];
 
+
 newGridOfSize(16,16);
 
 function newGridOfSize(rows, columns){
@@ -37,7 +38,7 @@ resetButton.addEventListener("click", resetGrid);
 function resetGrid(ev){
     Array.from(gridContainer.childNodes).forEach((e)=> gridContainer.removeChild(e))
     let sideQuantity = parseInt(window.prompt("Ingrese la cantidad de filas"));
-    let squareSide = Math.floor(500/sideQuantity);
+    let squareSide = Math.floor(1000/sideQuantity);
     gridContainer.style.cssText = `display: grid; 
                                    grid-template-columns: repeat(${sideQuantity}, ${squareSide}px);
                                    grid-template-rows: repeat(${sideQuantity}, ${squareSide}px);`;
